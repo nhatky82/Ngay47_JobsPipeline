@@ -1,0 +1,20 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - ./build.sh
+
+test_job:
+  stage: test
+  script:
+    - ./test.sh
+
+deploy_job:
+  stage: deploy
+  script:
+    - ./deploy.sh
+
